@@ -16,10 +16,27 @@
 #dashboard{
     grid-area: dashboard;
     background-color: #244855;
+    display: grid;
+    grid-template-columns: 80%;
+    grid-template-rows: auto;
+}
+#leftLogo{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+#leftLogo:hover{
+    text-decoration: 2px underline #E64833;
+}
+#leftContent div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+#leftContent div:hover{
+    text-decoration: 2px underline #E64833;
 }
 
 #dashboard div{
@@ -40,14 +57,29 @@ body{
     grid-template-areas: "dashboard main main main main ";
 
 }
+header{
+    background-color: #90AEAD;
+    padding-left: 5%;
+    padding-right: 7.5%;
+}
+#navRight{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+#navRightPhoto{
+    height: 3em;
+    width: 3em;
+    border-radius: 1.5em;
+    background-color: #E64833;
+}
 
 nav{
-    background-color: #90AEAD;
-    padding-left: 10px;
-    padding-right: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    grid-area: nav;
 }
 #navMainSearch{
     display: flex;
@@ -60,4 +92,35 @@ nav{
     border: none;
     border-radius: 0.5em;
     height: auto;
+}
+#navSecond{
+    grid-area: navSecond;
+}
+
+#headerButton{
+    grid-area:  headerButton;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#headerButton button{
+    border: none;
+    border-radius: 1em;
+    padding-right: 1em;
+    width: 25%;
+    height: 2em;
+    background-color: #244855;
+}
+#headerButton button:hover{
+    border:2px solid #E64833;
+}
+header{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 40% auto 40%;
+
+    grid-template-areas: "nav nav nav" "navSecond . headerButton";
+
+    align-items: center;
 }
