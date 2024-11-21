@@ -1,5 +1,4 @@
 
-
 .oswald-leftLogo {
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
@@ -13,12 +12,17 @@
     font-weight: 700;
     font-style: normal;
   }
+  .oswald-text {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: lighter;
+  }
 #dashboard{
     grid-area: dashboard;
     background-color: #244855;
-    display: grid;
-    grid-template-columns: 80%;
-    grid-template-rows: auto;
+    display: flex;
+    flex-direction: column;
 }
 #leftLogo{
     display: flex;
@@ -28,6 +32,9 @@
 }
 #leftLogo:hover{
     text-decoration: 2px underline #E64833;
+}
+#leftContent{
+    grid-area: leftContent;
 }
 #leftContent div{
     display: flex;
@@ -54,7 +61,7 @@ body{
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20% ;
     grid-template-rows: auto;
-    grid-template-areas: "dashboard main main main main ";
+    grid-template-areas: "dashboard main main main main " ;
 
 }
 header{
@@ -80,12 +87,15 @@ nav{
     flex-direction: column;
     gap: 20px;
     grid-area: nav;
+    justify-content: space-between;
+    
 }
 #navMainSearch{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-top: 10px;
 }
 #navMainSearch input{
     width: 50%;
@@ -123,4 +133,51 @@ header{
     grid-template-areas: "nav nav nav" "navSecond . headerButton";
 
     align-items: center;
+}
+#main{
+    box-sizing: content-box;
+}
+
+#mainContent{
+    padding: 2em;
+    display: grid;
+    grid-template-columns: 60% 25%;
+    grid-template-rows: auto;
+    grid-template-areas: 'projects announcements' 'projects trending';
+
+}
+#projects{
+    grid-area: projects;
+}
+#projectsContainer{
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-template-rows: auto;
+    gap: 10%;
+}
+.project{
+    border-radius: 0.5em;
+    border-left: 5px solid #874F41;
+    padding: 5%;
+    display: grid;
+    background-color: #FBE9D0;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: auto;
+    grid-template-areas: 'title . .' 'description description description' '. . buttons';
+}
+.project h2{
+    grid-area: title;
+}
+.project p{
+    grid-area: description;
+}
+.project div{
+    grid-area: buttons;
+}
+#announcements{
+    grid-area: announcements;
+
+}
+#trending{
+    grid-area: trending;
 }
