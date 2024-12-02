@@ -1,268 +1,249 @@
 
 .oswald-leftLogo {
-  font-family: "Oswald", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 1.5em;
-}
-.oswald-leftContent {
-    font-family: "Oswald", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-  }
-  .oswald-text {
-    font-family: "Oswald", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-weight: 300;
-  }
-#dashboard{
-    grid-area: dashboard;
-    background-color: #244855;
-    display: flex;
-    flex-direction: column;
-    height:auto;
-}
-
-#leftLogo{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-}
-#leftLogo:hover{
-    text-decoration: 2px underline #E64833;
-}
-#leftContent{
-    grid-area: leftContent;
-}
-#leftContent div{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-}
-#leftContent div:hover{
-    text-decoration: 2px underline #E64833;
-}
-
-#dashboard div{
-    padding: 10px;
-}
-#dashboard a{
-    text-decoration: none;
-    color: #E64833;
-}
-#main{
-    grid-area: main;
-}
-hr{
-    color: #874F41;
-    opacity: 0.5;
-}
-h2{
-    color: #244855;
-}
-body{
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20% ;
-    grid-template-rows: auto;
-    grid-template-areas: "dashboard main main main main " ;
-
-}
-header{
-    background-color: #90AEAD;
-    padding-left: 5%;
-    padding-right: 7.5%;
-}
-#navRight{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    align-items: center;
-}
-#navSecondHero{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 2em;
-}
-#HeroText{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2em;
-}
-#heroProfile {
-    height: 3em;
-    width: 3em;
-    border-radius: 50%;
-    background-color: #E64833;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#navRight div{
-    height: 3em;
-    width: 3em;
-    border-radius: 50%;
-    background-color: #E64833;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#navRightPhoto{
-    height: 3em;
-    width: 3em;
-    border-radius: 1.5em;
-    background-color: #E64833;
-}
-
-nav{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    grid-area: nav;
-    justify-content: space-between;
-    
-}
-#navMainSearch{
-    display: flex;
-    flex-direction: row;
-    justify-content:space-around;
-    align-items: center;
-    padding-top: 10px;
-}
-#searchBar{
-    display: flex;
-    flex-direction: row;
-    justify-content:space-around;
-    align-items: center;
-}
-#searchBar input{
-    width: 50em;
-    border: none;
-    border-radius: 0.5em;
-    height: auto;
-}
-#navMainSearch div>svg:hover{
-    opacity: 0.5 ;
-}
-#navSecond{
-    grid-area: navSecond;
-}
-
-#headerButton{
-    grid-area:  headerButton;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-#headerButton button{
-    border: none;
-    border-radius: 1em;
-    padding-right: 1em;
-    width: 25%;
-    height: 2em;
-    background-color: #244855;
-}
-#headerButton button:hover{
-    border:2px solid #E64833;
-}
-header{
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 40% auto 40%;
-
-    grid-template-areas: "nav nav nav" "navSecond . headerButton";
-
-    align-items: center;
-}
-#main{
-    box-sizing:border-box;
-}
-
-#mainContent{
-    padding: 2em;
-    display: grid;
-    grid-template-columns: 70% 30%;
-    grid-template-rows: auto;
-    grid-template-areas: 'projects announcements' 'projects trending';
-
-}
-#projects{
-    grid-area: projects;
-}
-#projectsContainer{
-    display: grid;
-    grid-template-columns: 45% 45%;
-    grid-template-rows: clamp(50%, 80%, 100%);
-    gap: 1em;
-}
-.project{
-    border-radius: 0.5em;
-    border-left: 5px solid #874F41;
-    padding: 5%;
-    display: grid;
-    background-color: #FBE9D0;
-    grid-template-columns: 30% 30% 30%;
-    grid-template-rows: auto;
-    grid-template-areas: 'title . .' 'description description description' '. . buttons';
-}
-.project h2{
-    grid-area: title;
-}
-.project p{
-    grid-area: description;
-}
-.project div{
-    grid-area: buttons;
-    display: flex;
-    flex-direction: rows;
-    align-items: center;
-    justify-content: space-between;
-}
-.project div>svg{
-    color: #E64833;
-}
-#announcements{
-    grid-area: announcements;
-
-}
-
-#containerAnnouncements{
-    background-color: #FBE9D0;
-    padding: 5%;
-    border-radius: 0.5em;
-}
-
-#trending{
-    grid-area: trending;
-}
-#trendingContainer{
-    background-color: #FBE9D0;
-    padding: 5%;
-    border-radius: 0.5em;
-}
-.trend div{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 2em;
-}
-.trend div>p{
-    color: #244855;
-}
-
-.trend div>div{
-    height: 3em;
-    width: 3em;
-    border-radius: 50%;
-    background-color: #E64833;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    font-family : "Oswald", sans-serif;
+    font-weight : 700;
+    font-style : normal;
+    font-size : 1.5em;
+    }
+    .oswald-leftContent {
+    font-family : "Oswald", sans-serif;
+    font-weight : 700;
+    font-style : normal;
+    }
+    .oswald-text {
+    font-family : "Oswald", sans-serif;
+    font-style : normal;
+    font-weight : 300;
+    }
+    #dashboard {
+    grid-area : dashboard;
+    background-color : #244855;
+    display : flex;
+    flex-direction : column;
+    height : auto;
+    }
+    #leftLogo {
+    display : flex;
+    flex-direction : row;
+    align-items : center;
+    justify-content : flex-start;
+    }
+    #leftLogo:hover {
+    text-decoration : underline #E64833 2px;
+    }
+    .leftContent {
+    grid-area : leftContent;
+    }
+    .leftContent div {
+    display : flex;
+    flex-direction : row;
+    align-items : center;
+    justify-content : flex-start;
+    }
+    .leftContent div:hover {
+    text-decoration : underline #E64833 2px;
+    }
+    #dashboard div {
+    padding : 10px;
+    }
+    #dashboard a {
+    text-decoration : none;
+    color : #E64833;
+    }
+    #main {
+    grid-area : main;
+    }
+    hr {
+    color : #874F41;
+    opacity : 0.5;
+    }
+    h2 {
+    color : #244855;
+    }
+    body {
+    display : grid;
+    grid-template-columns : 20% 20% 20% 20% 20%;
+    grid-template-rows : auto;
+    grid-template-areas : "dashboard main main main main ";
+    }
+    header {
+    background-color : #90AEAD;
+    padding-left : 5%;
+    padding-right : 7.5%;
+    }
+    #navRight {
+    display : flex;
+    flex-direction : row;
+    gap : 20px;
+    align-items : center;
+    }
+    #navSecondHero {
+    display : flex;
+    flex-direction : row;
+    align-items : center;
+    gap : 2em;
+    }
+    #HeroText {
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    gap : 2em;
+    }
+    #heroProfile {
+    height : 3em;
+    width : 3em;
+    border-radius : 50%;
+    background-color : #E64833;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    }
+    #navRight div {
+    height : 3em;
+    width : 3em;
+    border-radius : 50%;
+    background-color : #E64833;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    }
+    #navRightPhoto {
+    height : 3em;
+    width : 3em;
+    border-radius : 1.5em;
+    background-color : #E64833;
+    }
+    nav {
+    display : flex;
+    flex-direction : column;
+    gap : 20px;
+    grid-area : nav;
+    justify-content : space-between;
+    }
+    #navMainSearch {
+    display : flex;
+    flex-direction : row;
+    justify-content : space-around;
+    align-items : center;
+    padding-top : 10px;
+    }
+    #searchBar {
+    display : flex;
+    flex-direction : row;
+    justify-content : space-around;
+    align-items : center;
+    }
+    #searchBar input {
+    width : 50em;
+    border : none;
+    border-radius : 0.5em;
+    height : auto;
+    }
+    #navMainSearch div > svg:hover {
+    opacity : 0.5;
+    }
+    #navSecond {
+    grid-area : navSecond;
+    }
+    #headerButton {
+    grid-area : headerButton;
+    display : flex;
+    flex-direction : row;
+    justify-content : space-between;
+    }
+    #headerButton button {
+    border : none;
+    border-radius : 1em;
+    padding-right : 1em;
+    width : 25%;
+    height : 2em;
+    background-color : #244855;
+    }
+    #headerButton button:hover {
+    border : #E64833 solid 2px;
+    }
+    header {
+    display : grid;
+    grid-template-columns : 33% 33% 33%;
+    grid-template-rows : 40% auto 40%;
+    grid-template-areas : "nav nav nav" "navSecond . headerButton";
+    align-items : center;
+    }
+    #main {
+    box-sizing : border-box;
+    }
+    #mainContent {
+    padding : 2em;
+    display : grid;
+    grid-template-columns : 70% 30%;
+    grid-template-rows : auto;
+    grid-template-areas : 'projects announcements' 'projects trending';
+    }
+    #projects {
+    grid-area : projects;
+    }
+    #projectsContainer {
+    display : grid;
+    grid-template-columns : 45% 45%;
+    grid-template-rows : clamp(50%, 80%, 100%);
+    gap : 1em;
+    }
+    .project {
+    border-radius : 0.5em;
+    border-left : 5px solid #874F41;
+    padding : 5%;
+    display : grid;
+    background-color : #FBE9D0;
+    grid-template-columns : 30% 30% 30%;
+    grid-template-rows : auto;
+    grid-template-areas : 'title . .' 'description description description' '. . buttons';
+    }
+    .project h2 {
+    grid-area : title;
+    }
+    .project p {
+    grid-area : description;
+    }
+    .project div {
+    grid-area : buttons;
+    display : flex;
+    align-items : center;
+    justify-content : space-between;
+    }
+    .project div > svg {
+    color : #E64833;
+    }
+    #announcements {
+    grid-area : announcements;
+    }
+    #containerAnnouncements {
+    background-color : #FBE9D0;
+    padding : 5%;
+    border-radius : 0.5em;
+    }
+    #trending {
+    grid-area : trending;
+    }
+    #trendingContainer {
+    background-color : #FBE9D0;
+    padding : 5%;
+    border-radius : 0.5em;
+    }
+    .trend div {
+    display : flex;
+    flex-direction : row;
+    align-items : center;
+    gap : 2em;
+    }
+    .trend div > p {
+    color : #244855;
+    }
+    .trend div > div {
+    height : 3em;
+    width : 3em;
+    border-radius : 50%;
+    background-color : #E64833;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    }    
